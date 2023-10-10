@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "MansaTrade",
+    "slug": "mansatrade",
+    "version": "1.0.0",
+    "scheme": "solcashapp",
+    "orientation": "portrait",
+    "icon": "./assets/favicon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/first-logo.png",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/4efbefe3-19cd-4fc4-81bf-2e91f2882dd8"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.supernftier.mansatrade"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon.png",
+        "backgroundColor": "#00000000"
+      },
+      "package": "com.supernftier.solcash_mobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ce51e05f-92af-4241-b97b-626ad5b61259"
+      }
+    }
+  }
+}

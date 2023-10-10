@@ -1,0 +1,895 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_fir_div",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_sec_div",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "order_index",
+				"type": "uint256"
+			}
+		],
+		"name": "CreateOrder",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "order_index",
+				"type": "uint256"
+			}
+		],
+		"name": "buyerConfirm",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "offer_index",
+				"type": "uint256"
+			}
+		],
+		"name": "cancelOffer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "order_index",
+				"type": "uint256"
+			}
+		],
+		"name": "cancelOrder",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "order_index",
+				"type": "uint256"
+			}
+		],
+		"name": "confirmOrder",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "token_address",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "fiat",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "rate",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "payment_options",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "public_key",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "offer_terms",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "time_limit",
+				"type": "uint8"
+			},
+			{
+				"internalType": "bool",
+				"name": "eth",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "token_amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "min_limit",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "max_limit",
+				"type": "uint256"
+			}
+		],
+		"name": "createOffer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "payment_option",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "account_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "account_mail",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "receive_amount",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "offer_index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "sell_amount",
+				"type": "uint256"
+			}
+		],
+		"name": "createOrder",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "createUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "fee",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "fir_div",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "fir_fee",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getOfferByIndex",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "token_address",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "fiat",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "rate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "payment_options",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "public_key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "offer_terms",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "token_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "min_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "max_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bought",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "created_at",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "offer_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "time_limit",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "status",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "eth",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct MansaTrade.Offer",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "userAddress",
+				"type": "address"
+			}
+		],
+		"name": "getOfferIndexesOfUser",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getOffers",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "token_address",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "fiat",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "rate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "payment_options",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "public_key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "offer_terms",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "token_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "min_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "max_limit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bought",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "created_at",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "offer_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "time_limit",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "status",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "eth",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct MansaTrade.Offer[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getOrderByIndex",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "payment_option",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "account_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "account_mail",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "receive_amount",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "buyer_confirm",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "seller_confirm",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "feedback",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "order_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "offer_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sell_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "created_at",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MansaTrade.Order",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "userAddress",
+				"type": "address"
+			}
+		],
+		"name": "getOrderIndexesOfUser",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getOrders",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "payment_option",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "account_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "account_mail",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "receive_amount",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "buyer_confirm",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "seller_confirm",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "feedback",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "order_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "offer_index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sell_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "created_at",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MansaTrade.Order[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_address",
+				"type": "address"
+			}
+		],
+		"name": "getUser",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bool",
+						"name": "verified",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "thumbs_up",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "thumbs_down",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "region",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "user_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "offer_indexes",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "order_indexes",
+						"type": "uint256[]"
+					}
+				],
+				"internalType": "struct MansaTrade.User",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "sec_div",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "sec_fee",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "flag",
+				"type": "bool"
+			},
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "order_index",
+				"type": "uint256"
+			}
+		],
+		"name": "thumbUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_fee",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_fir_fee",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_sec_fee",
+				"type": "uint256"
+			}
+		],
+		"name": "updateFee",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_fir_div",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_sec_div",
+				"type": "address"
+			}
+		],
+		"name": "updateFeeDivider",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_fiat",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_payment_options",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_offer_terms",
+				"type": "string"
+			},
+			{
+				"internalType": "uint8",
+				"name": "_time_limit",
+				"type": "uint8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "offer_index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_token_amount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_min_limit",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_max_limit",
+				"type": "uint256"
+			}
+		],
+		"name": "updateOffer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint8",
+				"name": "_region",
+				"type": "uint8"
+			}
+		],
+		"name": "updateUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "verifyUser",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

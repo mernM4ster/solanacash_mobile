@@ -1,0 +1,1 @@
+export const SOLANA_API_URL = "https://api.solscan.io/market?symbol=";
